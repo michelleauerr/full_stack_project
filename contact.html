@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Astrology</title>
+</head>
+
+<body>
+	<div class="container">
+        
+        <header class="header">
+            <h1>Astrology</h1>
+            <nav class= "nav">
+                <div class="topnav">
+                    <a href="index.html">Home</a>
+                    <a href="info.html">Planets and elements</a>
+                    <a href="mysign.html">Calcute your sign</a>
+                    <a class="active" href="contact.html">Contact</a>
+                  </div>
+            </nav>
+        </header>
+
+        <main class="formcontact">
+            <form method="post" action="" class="contact">
+                <h3>If you want a complete reading of your natal chart, please leave us your contact: </h3>
+                <br><br>
+                <label for="name">Name</label> <br>
+                <input type="text" id="name" size="30" placeholder="Your name.." required>
+            <br><br>
+                <label for="lastname">Last name</label> <br>
+                <input type="text" id="lastname" size="30" placeholder="Your last name.." required>
+            <br> <br>
+                <label for="country">Country</label> <br>
+                <input type="text" id="country" size="30" placeholder="Your country.." required>
+            <br><br>
+                <label for="email">Contact email</label> <br>
+                <input type="email" id="email" size="30" placeholder="Your email.." required>
+                <span id="error" style="color:red;"></span>
+            <br><br>
+                <label for="comments">Comments</label><br>
+                <textarea type="text" id="comments" maxlength="300" rows="10" cols="50"> Write something.. </textarea> 
+            <br><br> 
+                <button type="submit" class="button"> Send </button>
+            </form>
+            <br><hr><br>
+            <div class="iframe">  
+                <h4> In addition, I leave you an introductory video to keep exploring!</h4>
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/uYCeKwPpqwU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </main>
+
+
+        <footer class="footer">
+            <h8>Copyright © 2022 Astrology </h8>
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

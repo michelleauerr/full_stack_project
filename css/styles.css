@@ -1,0 +1,444 @@
+
+/* styles in ALL */
+
+* {
+	margin: 0px;
+	padding: 0;
+}
+
+body { 
+	background-color: #e4e4e8;
+	color: rgba(0, 0, 0, 0.995);
+	font-family: lucida grande, tahoma, verdana, arial, sans-serif;
+}
+
+.container {
+	width: 100%;
+	max-width: 1000px;
+	margin: 30px auto;
+	display: grid;
+	gap: 35px;
+	grid-template-areas: "header header header"
+						 "content content sidebar"
+						 "widget widget sidebar"
+						 "footer footer footer";
+}
+
+.container .header,
+.container .content,
+.container .presentation,
+.container .sidebar,
+.container .widget,
+.container .footer {
+	padding: 20px;
+	border-radius: 30px;
+	border-style:groove;
+}
+
+
+/* Header in ALL */
+
+.container .header {
+	background: #7b6691;
+	color: #fff;
+	grid-area: header;
+	text-align: center;
+	border-radius: 30px;
+	border-color: rgb(158, 54, 80);
+	border-style:outset ;
+}
+.topnav {
+		background-color: #333;
+		overflow: hidden;
+		grid-area: nav;
+		border-radius: 10px;
+		border-style: hidden;
+	}
+	
+.topnav a {
+		float: left;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 10px 15px;
+		text-decoration: none;
+		font-size: 15px;
+}
+
+.topnav a:hover {
+		background-color: #ddd;
+		color: black;
+}
+
+.topnav a.active {
+		background-color: #04AA6D;
+		color: white;
+}
+
+
+/* Sidebar in ALL */
+
+.container .sidebar {
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	flex-flow: column wrap;
+	background-color: #f4f0ff;
+	text-align: center;
+	display: flex;
+	align-items:flex-start;
+	height:fit-content;
+	min-width: 200px;
+	grid-area: sidebar;	
+}
+
+/* Footer in ALL */
+
+.container .footer {
+	background: #7b6691;
+	color: #fff;
+	grid-area: footer;
+	border-radius: 50px;
+	border-color: rgb(158, 54, 80);
+	border-style:inset ;
+}
+
+
+/* Content in main page HOME */
+
+.presentation {
+	background-image: url(http://www.fotonat.org/data/media/13/Sin-ttulo-5.jpg);
+	color:#ffff;
+	width: 100%;
+	border-radius: 30px;
+	padding: 15px;
+	margin: 0;
+}
+
+.frontimg {
+	font-family: 'Raleway', Arial, sans-serif;
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+	margin: 20px;
+	min-width: 200px;
+	max-width: 500px;
+	max-height: 225px;
+	background: #000000;
+	text-align: center;
+}
+.frontimg * {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.frontimg img {
+	opacity: 1;
+	width: 100%;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+}
+.frontimg figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: left;
+}
+	  
+.frontimg figcaption > div {
+	float: left;
+	height: 100%;
+	overflow: hidden;
+	width: 50%;
+	position: relative;
+}
+	  
+.frontimg figcaption::before {
+	position: absolute;
+	top: 50%;
+	bottom: 50%;
+	left: 50%;
+	width: 2px;
+	content: '';
+	opacity: 0;
+	background-color: rgba(255, 255, 255, 0);
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+	-webkit-transition-delay: 0.6s;
+	transition-delay: 0.6s;
+}
+.frontimg h2, .frontimg p {
+	margin: 0;
+	padding: 20px;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	left: 0;
+	-webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
+	transition: opacity 0.45s,-webkit-transform 0.45s,-moz-transform 0.45s,-o-transform 0.45s,transform 0.45s;
+}
+.frontimg h2 {
+	text-align: right;
+	display: inline-block;
+	word-spacing: -0.1em;
+	font-weight: 300;
+	text-transform: uppercase;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	-webkit-transform: translate3d(50%, 0%, 0);
+	transform: translate3d(50%, 0%, 0);
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+.frontimg h2 span {
+font-weight: 800;
+}
+.frontimg p {
+	display: block;
+	bottom: 0;
+	text-align: left;
+	font-weight: 300;
+	top: 0%;
+	color: #000;
+	background: #ffffff;
+	-webkit-transform: translate3d(-50%, 0%, 0);
+	transform: translate3d(-50%, 0%, 0);
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+.frontimg a {
+	left: 0;
+	right: 0;	
+	top: 0;
+	bottom: 0;
+	position: absolute;
+	color: #ffffff;
+}
+.frontimg:hover img {
+	opacity: 0.7;
+}
+.frontimg:hover figcaption h2,
+.frontimg:hover figcaption p {
+	-webkit-transform: translate3d(0%, 0%, 0);
+	transform: translate3d(0%, 0%, 0);
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+	opacity: 1;
+}
+.frontimg:hover figcaption::before {
+	background: #ffffff;
+	top: 0px;
+	bottom: 0px;
+	opacity: 1;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+/* Content in pages INFO y SIGN */
+
+.container .content {
+	grid-area: content;
+	background-color: #f4f0ff;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}	
+
+.content .mysign {
+	font-size: 20px;
+}
+
+.content .mysign .button {
+		height: 30px;
+		width: 80px;
+		border-radius: 2px;
+		border-color: green;
+		background-color: #7b6691;
+		color:#fff;
+		font-size: 15px;
+}
+
+.mysign input:invalid {
+	border: 1px dashed red;
+	font-size: 14px;
+}
+.mysing input:valid {
+	border: 1px solid black;
+  }
+.mysign #month {
+	font-size: 20px;
+}
+
+
+/* Content in page INFO */
+
+.planet-img {
+	float:left;
+	max-width: 50px;
+}
+.planet-txt {
+	margin-left: 100px;
+} 
+
+/* Sidebar in page INFO */
+
+.card-img-f , .card-img-t , .card-img-ai , .card-img-ag {
+	float: left;
+	max-width: 50px;
+	border-radius: 10px;
+	border-style:double;
+	border-width: 5px;
+}
+	.card-img-f {
+		border-color: red;
+		margin-right: 20px;
+	}
+	.card-img-t{
+		border-color: green;
+		margin-right: 20px;
+	}
+	.card-img-ai{
+		border-color: rgb(213, 213, 9);
+		margin-right: 20px;
+	}	
+	.card-img-ag{
+		border-color: blue;
+		margin-right: 20px;
+	}
+
+
+/* Widget (only in page INFO) */
+
+.container .widget {
+	font-family: lucida grande, tahoma, verdana, arial, sans-serif;
+	background-image: url(http://www.fotonat.org/data/media/13/Sin-ttulo-5.jpg);
+	color: #ffffff;
+	border-radius: 20%;
+	border-style:groove;
+	padding: 2%;
+	overflow-y: scroll;
+	height: 100px;
+	display:flex ;
+	align-items: center;
+	justify-content:center;
+	grid-area: widget;
+	transition-property: width;
+	transition-duration: 2s;
+}
+.container .widget .calculator {
+	color:#04AA6D;
+	text-decoration: none;
+}
+.container .widget:hover {
+		width: 800px;
+}
+
+
+/* Content in page CONTACT */
+
+.formcontact  {
+	background-color: #f4f0ff;
+	border: 1px solid rgb(135, 132, 132); 
+	margin-bottom: 0px;
+	min-width: 400px;
+	max-width: 600px;
+	width: 98%;
+	color: black;
+	padding: 12px 20px;
+	cursor:pointer ;
+	grid-area: content;
+}  
+
+.formcontact .button{
+	height: 25px;
+	width: 60px;
+	border-radius: 2px;
+	border-color: green;
+	background-color: #7b6691;
+	color:#fff;
+	font-size: 15px
+}
+
+.contact #comments {
+	resize:none;
+	font-size: 12px
+}
+
+input:invalid {
+	border: 1px dashed red;
+	font-size: 13px
+  }
+  
+input:valid {
+	border: 1px solid black;
+	font-size: 13px
+  }
+
+
+
+/* Media screen for PHONE */
+
+@media screen and (max-width: 750px){
+	.container {
+		width: 100%;
+		grid-template-areas: "header header header"
+						 "sidebar sidebar sidebar"
+						 "content content content"
+						 "widget widget widget"
+						 "footer footer footer";
+	}
+
+	.container .sidebar {
+		margin-top: 10px;
+	}
+	.container .widget {
+		width: 200px;
+	}
+	.container .widget:hover {
+		width: 90%;
+	}
+}
+
+/* media screen for TABLET */
+
+@media screen and (min-width: 750px) {
+	.container {
+		grid-template-areas: "header header header"
+						 "sidebar sidebar sidebar"
+						 "content content content"
+						 "widget widget widget"
+						 "footer footer footer";
+	}
+	.container .content {
+		background-color: #f4f0ff;
+		width: 90%;
+	}
+	.container .sidebar {
+		width: 90%;
+	}
+	.container .widget {
+		width: 400px;
+	}
+	.container .widget:hover {
+		width: 90%;
+	}	
+}
+
+/* media screen for LAPTOP */
+
+@media screen and (min-width: 1000px) {
+	.container {
+		grid-template-areas: "header header header"
+						 "content content sidebar"
+						 "widget widget widget"
+						 "footer footer footer";
+	}
+
+	.container .content {
+		background-color: #f4f0ff;
+	}
+
+	.container .widget {
+		width: 700px;
+	}
+	.container .widget:hover {
+		width: 90%;
+	}	
+}
